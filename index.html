@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Budget App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Styles/style.css">
+</head>
+
+<body>
+    <div class="bg mx-2 my-3">
+        <!-- Title Section -->
+        <p class="text-center text-white title">Money To The Max</p>
+        <!-- End Title -->
+        <!-- Start Body Section -->
+        <div class="container">
+            <hr class="hrColor">
+            <div class="row">
+                <p id="balance" class="text-white text-center balanceTxt">0.00</p>
+            </div>
+            <hr class="hrColor">
+            <div class="row">
+                <div class="col ">
+                    <div class="row mb-3 justify-content-center"><button type="button" class="btn w-50 btn-success"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">Set
+                            Budget</button></div>
+                    <div class="row mb-3 justify-content-center"><button id="manageBtn" type="button"
+                            class="btn w-50 btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Manage Budget</button></div>
+                    <div class="row justify-content-center"><button id="addExpenseBtn" type="button"
+                            class="btn w-50 btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal3">Add Expenses</button></div>
+                </div>
+            </div>
+            <hr class="hrColor">
+            <div id="expensesDiv" class="row text-white mx-2">
+
+            </div>
+        </div>
+        <!-- End Body -->
+    </div>
+
+    <!-- Set budget Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">How Much Money you got</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="moneyAmount" class="form-label">Enter Amount</label>
+                        <input type="number" class="form-control" id="moneyAmount"
+                            placeholder="10000">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="setBudgetBtn" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Set Modal -->
+
+
+
+
+
+
+
+
+    <!-- Start Manage Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Save Some Money</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3" id="expensesDiv2">
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Manage Modal -->
+
+
+
+
+
+
+
+
+
+
+    <!-- Start Add Modal -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Spend That Cash</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="moneyAmount" class="form-label">Enter Expense</label>
+                        <input type="text" class="form-control" id="expenseName"
+                            placeholder="Bills">
+                        <label for="moneyAmount" class="form-label">Enter Amount</label>
+                        <input type="number" class="form-control" id="taskCost" 
+                            placeholder="10000">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="newExpenseBtn" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Add Modal -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+
+</html>

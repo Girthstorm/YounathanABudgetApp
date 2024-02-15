@@ -1,0 +1,21 @@
+.title {
+    font-size: 32px;
+}
+
+.bg{
+    background-color: #1F6D75;
+    border-radius: 12px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #faf6f6;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+.balanceTxt {
+    font-size: 40px;
+}
